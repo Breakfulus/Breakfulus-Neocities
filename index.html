@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>The Graveyard</title>
+        <style>
+            /*Link Styling*/
+            a {
+                color: beige;
+            }
+            a:visited {
+                color: #6a7abe;
+            }
+            a:hover {
+                color: #a1aeec;
+            }
+
+
+            /*Button Styling*/
+            button {
+                background: #a1aeec;
+                border-color:#a1aeec;
+                color: #21294b;
+            }
+
+            button:hover {
+                background:#6a7abe;
+                color: #e2dddd
+            }
+
+            /*Body Styling*/
+            body {
+            background-color: #21294b;
+            
+            font-family: "Trebuchet MS", sans-serif;
+            color:#a1aeec;
+            }
+
+            /*Profile Image*/
+            .ghost { position: absolute; top: -85px; left: -85px; width: 200px;}
+            
+            /*Main Container*/
+            .container {
+                width: 900px;
+                display: flex;
+                color: #e2dddd;
+                margin: auto;
+                padding: 20px;
+            }
+
+            /*Container Body Style*/
+            .content {
+            position: relative;
+            background: #36406b;
+            flex: 3;
+            margin: auto;
+            margin-right: 15px;
+            border-radius: 15px;
+            padding: 25px;
+            }
+
+            .nav {
+            background: #36406b;
+            flex: 1;
+            border-radius: 15px;
+            margin-right: 15px;
+            padding: 20px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align: center;font-size: 50px;">The Haunted Manor</h1>
+        <!-- Theme button for light and dark mode when I get js in -->
+        <button style="padding: 8px;margin-left: 25px;">Theme</button>
+
+        <div class="container">
+            
+            
+            <div class="content">
+                <img class="ghost" src="Assets/Linen Profile.png" alt="GOST">
+                <h1 style="text-align: center;">Welcome to my home!</h1>
+                <p>Hey there! My name is Breakfulus, but you can call me Linen. This is my first ever website! 
+                    My usual language is python, so this is a first time all around for me, before this I had never touched HTML or CSS, so...Yay!
+                </p>
+
+                <h2>A bit of background</h2>
+                <p>
+                    I'm a little ghost with some big dreams, specifically in making videogames. 
+                    For until I get around to actually making the other pages, Imma just put my about me stuff here!
+                    If the drawn asset didn't give it away, I come primarily from an artistic background. I've always
+                    loved drawing, I can't count how many sketchbooks I've filled, but its a lot! 
+
+                </p>
+            </div>
+
+            <div class="nav">
+                <h3 style="text-align: center;">-- Pages --</h3>
+                <ul>
+                    <li> <a href="index.html">Home</a> </li>
+                    <li> <a href="about.html">About</a> </li>
+                    <li> <a href="projects.html">Projects</a> </li>
+                    <li> <a href="devlog.html">Devlog</a> </li>
+                    <li> <a href="art.html">Art</a> </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </body>
+
+</html>
