@@ -2,7 +2,7 @@
 
 <html>
     <head>
-        <title>Devlog</title>
+        <title>Post</title>
         <style>
             /*Link Styling*/
             a {
@@ -22,13 +22,13 @@
             }
 
             h1 {
-                font-size: 50px;
+                font-size: 35px;
                 text-align: center;
             }
             
             /*Main Container*/
             .container {
-                width: 900px;
+                width: 1000px;
                 display: flex;
                 color: #e2dddd;
                 margin: auto;
@@ -54,31 +54,12 @@
             margin-right: 15px;
             padding: 20px;
             }
-
-            .post {
-                position: relative;
-                margin: auto;
-                margin-top: 15px;
-                background-color: #a1aeec;
-                color: #36406b;
-                padding: 15px;
-                border-radius: 15px;
-                vertical-align: center;
-            }
-
-            .post:hover {
-                background-color: #6a7abe;
-            }
         </style>
+        
     </head>
     <body>
-        <h1><b>Devlogs</b></h1>
-        
         <div class="container">
-            
-            <div class="content">
-                <div id="devlog-list"></div>
-            </div>
+            <div id="post" class="content"></div>
             <div class="nav">
                 <h3 style="text-align: center;">-- Pages --</h3>
                 <ul>
@@ -95,28 +76,25 @@
                     </ul>
                 </div>
         </div>
+        
+
+        
         <script src="posts.js"></script>
         <script>
             posts.sort((a, b) => new Date(b.date) - new Date(a.date))
             posts.sort((a, b) => new Boolean(b.pinned) - new Boolean(a.pinned))
-            
-            const conatiner = document.getElementById("devlog-list")
-            posts.forEach((post, index) => {
-                const div = document.createElement("div")
-                div.className = "post";
+        const index = localStorage.getItem("currentPost");
+        const post = posts[index];
 
-                div.innerHTML = `
-                <h2>[${post.date}] ${post.title}</h2>
-                <p style="font-size: 11px">${post.type}</p>
-                `;
+        const container = document.getElementById("post");
 
-                div.addEventListener("click", () => {
-                    localStorage.setItem("currentPost", index)
-                    window.location.href = "post.html"; 
-                });
+        container.innerHTML = `
+        <h1><b>${post.title}</b></h1>
+        <p>[${post.date}] -- ${post.type}</p>
 
-                conatiner.appendChild(div);
-            });
+        <p>${post.content}</p>
+        `;
         </script>
+
     </body>
 </html>

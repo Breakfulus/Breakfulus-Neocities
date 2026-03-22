@@ -15,19 +15,6 @@
                 color: #a1aeec;
             }
 
-
-            /*Button Styling*/
-            button {
-                background: #a1aeec;
-                border-color:#a1aeec;
-                color: #21294b;
-            }
-
-            button:hover {
-                background:#6a7abe;
-                color: #e2dddd
-            }
-
             /*Body Styling*/
             body {
             background-color: #21294b;
@@ -38,6 +25,34 @@
 
             /*Profile Image*/
             .ghost { position: absolute; top: -85px; left: -85px; width: 200px;}
+
+            .button {
+                margin: auto;
+                background: #a1aeec;
+                border: none;
+                color: #21294b;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                cursor: pointer;
+            }
+
+            .button1 {
+                position: relative;
+                display: inline;
+                background: #a1aeec;
+                border-radius: 4px;
+                border: #a1adec00 solid;
+                padding: 8px;
+                margin-left: 150px;
+            }
+
+            button:hover {
+                background:#6a7abe;
+                color: #e2dddd
+            }
             
             /*Main Container*/
             .container {
@@ -70,22 +85,22 @@
 
         </style>
     </head>
+
     <body>
         <h1 style="text-align: center;font-size: 50px;">The Haunted Manor</h1>
         <!-- Theme button for light and dark mode when I get js in -->
-        <button style="padding: 8px;margin-left: 25px;">Theme</button>
+        <button class="button1">Theme</button>
 
         <div class="container">
             
-            
             <div class="content">
-                <img class="ghost" src="Assets/Linen Profile.png" alt="GOST">
+                <img class="ghost" src="Assets/Linen Profile.png" alt="A sheet ghost coming through a portal and waving a paintbrush tipped with red paint, the paint flowing in a circle.">
                 <h1 style="text-align: center;">Welcome to my home!</h1>
                 <p>Hey there! My name is Breakfulus, but you can call me Linen. This is my first ever website! 
                     My usual language is python, so this is a first time all around for me, before this I had never touched HTML or CSS, so...Yay!
                     Im an artist and programmer working on a tower defense game where you capture enemies and use them as towers.
+                    <br><br><br><br>
                 </p>
-
             </div>
 
             <div class="nav">
@@ -97,10 +112,15 @@
                     <li> <a href="devlog.html">Devlog</a> </li>
                     <li> <a href="art.html">Art</a> </li>
                 </ul>
+                <div>
+                    <h3 style="text-align: center;">-- Links --</h3>
+                    <ul>
+                        <li> <a href="https://github.com/Breakfulus">Github</a> </li>
+                    </ul>
+                </div>
             </div>
 
         </div>
-
     </body>
 
 </html>
