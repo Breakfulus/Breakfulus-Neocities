@@ -3,61 +3,11 @@
 <html>
     <head>
         <title>Post</title>
-        <style>
-            /*Link Styling*/
-            a {
-                color: beige;
-            }
-            a:visited {
-                color: #6a7abe;
-            }
-            a:hover {
-                color: #a1aeec;
-            }
-            body {
-                background-color: #21294b;
-                
-                font-family: "Helvetica";
-                color:#a1aeec;
-            }
-
-            h1 {
-                font-size: 35px;
-                text-align: center;
-            }
-            
-            /*Main Container*/
-            .container {
-                width: 1000px;
-                display: flex;
-                color: #e2dddd;
-                margin: auto;
-                padding: 20px;
-                vertical-align: center;
-            }
-
-            /*Container Body Style*/
-            .content {
-            position: relative;
-            background: #36406b;
-            flex: 3;
-            margin: auto;
-            margin-right: 15px;
-            border-radius: 15px;
-            padding: 25px;
-            }
-
-            .nav {
-            background: #36406b;
-            flex: 1;
-            border-radius: 15px;
-            margin-right: 15px;
-            padding: 20px;
-            }
-        </style>
-        
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <h1 class="pageTitle">Devlog Post</h1>
+        <button class="themeButton" id="themeButton">Theme</button>
         <div class="container">
             <div id="post" class="content"></div>
             <div class="nav">
@@ -79,6 +29,7 @@
         
 
         
+        <script src="themeButton.js"></script>
         <script src="posts.js"></script>
         <script>
             posts.sort((a, b) => new Date(b.date) - new Date(a.date))
